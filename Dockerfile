@@ -5,3 +5,4 @@ COPY . /app
 RUN yarn
 RUN yarn run lint
 RUN quasar build -m electron
+
