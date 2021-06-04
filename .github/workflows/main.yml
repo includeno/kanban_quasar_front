@@ -25,11 +25,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install yarn
         run: npm install -g yarn
+      - name: install quasar-cli
+        run: npm install -g quasar-cli
+      
       # here are some step followed , each step must have `uses` or `run` key , for CI to run
       # other key like `name`,`with`,`env` is optional
       - name: yarn
         run: yarn
-      - name: build ----
+      - name: quasar build 
         run: quasar build -m electron
       - name: show ----
         run: ls -a
