@@ -23,8 +23,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install yarn
-        run: npm install -g yarn
+      # - name: install yarn
+      #   run: npm install -g yarn
       - name: install vue-cli
         run: npm install vue-cli -g
       - name: install quasar-cli
@@ -32,8 +32,8 @@ jobs:
       
       # here are some step followed , each step must have `uses` or `run` key , for CI to run
       # other key like `name`,`with`,`env` is optional
-      - name: yarn
-        run: yarn
+      # - name: yarn
+      #   run: yarn
       
         
       - name: quasar build 
