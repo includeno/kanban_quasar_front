@@ -28,7 +28,7 @@ jobs:
       - name: install vue-cli
         run: npm install vue-cli -g
       - name: install quasar-cli
-        run: npm install -g @quasar/cli
+        run: npm install -g quasar/cli
       - name: yarn install packages
         run: yarn
       
