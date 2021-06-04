@@ -1,6 +1,6 @@
 # https://docs.github.com/en/actions/guides
 # CI name , it will display on github's action page menu
-name: 构建kanban app 前端
+name: 构建kanban_app前端
 # trigger on which this CI should be run
 on: # push operation is operate
   push:
@@ -38,7 +38,7 @@ jobs:
           context: .
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          tags: "includeno/${{env.TAG_NAME}}:latest,includeno/${{env.TAG_NAME}}:${{env.STATE_RELEASE_VERSION}}"
+          tags: "includeno/${{env.TAG_NAME}}:latest,includeno/${{env.TAG_NAME}}:1.0"
           push: true
       - name: The job has succeeded
         if: ${{ success() }}
