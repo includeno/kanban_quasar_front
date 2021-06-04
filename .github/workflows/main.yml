@@ -26,7 +26,7 @@ jobs:
       - name: install yarn
         run: npm install -g yarn
       - name: install quasar-cli
-        run: npm install -g quasar-cli
+        run: yarn global add @quasar/cli
       
       # here are some step followed , each step must have `uses` or `run` key , for CI to run
       # other key like `name`,`with`,`env` is optional
