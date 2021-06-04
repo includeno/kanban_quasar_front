@@ -34,8 +34,7 @@ jobs:
       # other key like `name`,`with`,`env` is optional
       - name: yarn
         run: yarn
-      - name: yarn
-        run: yarn run lint
+      
         
       - name: quasar build 
         run: quasar build -m electron
