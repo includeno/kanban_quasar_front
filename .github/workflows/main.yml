@@ -19,6 +19,9 @@ jobs:
       # - uses: bahmutov/npm-install@v1
       #   with:
       #     working-directory: .
+      - name: install npm
+        run: apt-get install npm -y
+      
       - name: install yarn
         run: npm install -g yarn
       # here are some step followed , each step must have `uses` or `run` key , for CI to run
