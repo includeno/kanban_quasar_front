@@ -25,19 +25,23 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install yarn
         run: npm install -g yarn
+      - name: install vue-cli
+        run: npm install vue-cli -g
       - name: install quasar-cli
-        run: yarn global add @quasar/cli
+        run: npm install quasar-cli -g
       
       # here are some step followed , each step must have `uses` or `run` key , for CI to run
       # other key like `name`,`with`,`env` is optional
       - name: yarn
         run: yarn
+      - name: yarn
+        run: yarn run lint
+        
       - name: quasar build 
         run: quasar build -m electron
       - name: show ----
         run: ls -a
-      - name: Output Docker info
-        run: docker info
+      
       # - name: Login to DockerHub
       #   uses: docker/login-action@v1
       #   with:
