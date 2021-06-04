@@ -28,7 +28,9 @@ jobs:
       - name: install vue-cli
         run: npm install vue-cli -g
       - name: install quasar-cli
-        run: npm install quasar-cli -g
+        run: npm install -g @quasar/cli
+      - name: npm install
+        run: npm install
       
       # here are some step followed , each step must have `uses` or `run` key , for CI to run
       # other key like `name`,`with`,`env` is optional
